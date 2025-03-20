@@ -4,16 +4,14 @@ body {
     background-color: #f4f4f4;
     color: #222;
     text-align: center;
-    transition: background 0.3s, color 0.3s;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #222;
-    color: #f4f4f4;
-    transition: background 0.3s, color 0.3s;
+    background-color: #181818;
+    color: #e0e0e0;
 }
-
 /* Toggle Button - Positioned at Top Right */
 #theme-toggle {
     position: absolute;
@@ -77,6 +75,3 @@ body.dark-mode #theme-toggle {
 body.dark-mode .toggle-ball {
     transform: translateX(30px);
 }
-
-
-

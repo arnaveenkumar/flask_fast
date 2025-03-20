@@ -4,8 +4,8 @@ I’m developing a to-do app that allows users to add and remove tasks using a F
 
 ## Features
 
--- Added a dark theme
--- Up next: Edit tasks 
+* Added a dark theme
+* Up next: Edit tasks 
 
 I'll be adding several features in the coming days.
 

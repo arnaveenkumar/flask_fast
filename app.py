@@ -16,13 +16,6 @@ def add_task():
         tasks.append({"name": task_name, "completed": False})
     return redirect(url_for("home"))
 
-@app.route('/edit/<int:task_id>', methods=['POST'])
-def edit_task(task_id):
-    new_text = request.form.get('task')
-    if 0 <= task_id < len(tasks):
-        tasks[task_id]["text"] = new_text
-    return redirect(url_for("home"))
-
 @app.route("/complete/<int:task_id>")
 def complete_task(task_id):
     if 0 <= task_id < len(tasks):

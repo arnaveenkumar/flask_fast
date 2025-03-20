@@ -43,9 +43,6 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        button.edit {
-            background: #28a745;
-        }
         button.complete {
             background: #007bff;
         }
@@ -99,7 +96,6 @@
             <li class="{{ 'completed' if task.completed }}">
                 <b>{{ task.name }} </b>
                 <div>
-                    <a href="/edit/{{ loop.index0 }}"><button class="edit"></button>Edit</button></a>
                     <a href="/complete/{{ loop.index0 }}"><button class="complete">Complete</button></a>
                     <a href="/delete/{{ loop.index0 }}"><button class="delete">Delete</button></a>
                 </div>

@@ -6,6 +6,10 @@ I’m developing a to-do app that allows users to add, edit, and remove tasks us
 
 I have added a dark theme to the page and will be adding several features in the coming days.
 
+## Project Status
+
+I've started to develop this app as a side project. It is currently in active development.  
+
 ## Contribute
 
 You can contribute to this project and report any issues.

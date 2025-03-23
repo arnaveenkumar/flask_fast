@@ -13,11 +13,12 @@ I'll be adding several features in the coming days.
 
 I've started to develop this app as a side project. It is currently in active development.  
 
+## Installation Guide
 
-## Installation
-
-* Python
-* Flask
+### Requirements
+- [Node](https://nodejs.org/en/download)
+- [Python](https://www.python.org/downloads/)
+- [Flask](https://flask.palletsprojects.com/en/stable/installation/)
 
 ## Contribute
 

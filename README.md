@@ -13,6 +13,12 @@ I'll be adding several features in the coming days.
 
 I've started to develop this app as a side project. It is currently in active development.  
 
+
+## Installation
+
+* Python
+* Flask
+
 ## Contribute
 
 You can contribute to this project and report any issues.

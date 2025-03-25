@@ -25,6 +25,6 @@ I've started to develop this app as a side project. It is currently in active de
 
 ## Contribute
 
-You can contribute to this project and report any issues.
+Fell free to contribute to this project and report any issues.
 
 I'm also happy to receive feedback or feature requests.

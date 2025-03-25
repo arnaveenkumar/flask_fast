@@ -1,4 +1,4 @@
-# flask_todo_app
+# Tickit
 
 I’m developing a to-do app that allows users to add and remove tasks using a Flask-RESTful API. 
 

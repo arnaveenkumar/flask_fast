@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickit</title>
+    <script>
+        (function() {
+            // Apply dark mode instantly before rendering
+            if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
+        /* Prevent light theme flash */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+
+        body.loaded {
+            visibility: visible;
+            opacity: 1;
         }
         .container {
             max-width: 600px;

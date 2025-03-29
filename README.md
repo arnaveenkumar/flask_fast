@@ -4,7 +4,7 @@ I’m developing a to-do web app that allows users to manage tasks effortlessly.
 
 ## Features
 
-* Added a dark theme
+* Improved dark theme
 * Up next:
      * Edit tasks, Create timestamps for the created tasks.
      * Removing the Delete button for a cleaner UI. Users can delete tasks by either checking the radio button or clicking the ‘X’ icon in the task list.

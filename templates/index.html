@@ -21,6 +21,10 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        body.dark-mode .container {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        }
         h1 {
             margin-bottom: 20px;
         }
@@ -28,6 +32,7 @@
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
+            background: transparent;
         }
         input[type="text"] {
             flex: 1;
@@ -39,7 +44,7 @@
             color: #222;
         }
         body.dark-mode input[type="text"] {
-            background-color: #333;
+            background-color: transparent;
             color: #f0f0f0;
             border: 1px solid #555;
         }

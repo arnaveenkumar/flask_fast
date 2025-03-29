@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
+            text-align: center;
         }
         .container {
             max-width: 600px;
@@ -21,33 +22,42 @@
             border-radius: 8px;
         }
         h1 {
-            text-align: center;
+            margin-bottom: 20px;
         }
         form {
             display: flex;
-            justify-content: space-between;
+            gap: 10px;
             margin-bottom: 20px;
         }
         input[type="text"] {
             flex: 1;
             padding: 10px;
-            margin-right: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
         button {
             padding: 10px 20px;
-            background: #28a745;
-            color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
         }
-        button.complete {
+        button:hover {
+            opacity: 0.8;
+        }
+        .add {
+            background: #28a745;
+            color: white;
+        }
+        .complete {
             background: #007bff;
+            color: white;
         }
-        button.delete {
+        .delete {
             background: #dc3545;
+            color: white;
         }
         ul {
             list-style-type: none;
@@ -63,48 +73,50 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        body.dark-mode li{
+        body.dark-mode li {
             color: #222;
         }
         li.completed {
             text-decoration: line-through;
             color: #777;
         }
-        
-       
+        #theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="theme-toggle">
-            <div class="toggle-track">
-                <span class="icon sun">🌞</span>
-                <div class="toggle-ball"></div>
-                <span class="icon moon">🌙</span>
-            </div>
+        <div class="toggle-track">
+            <span class="icon sun">🌞</span>
+            <div class="toggle-ball"></div>
+            <span class="icon moon">🌙</span>
+        </div>
     </div>
-    
 
-    <h1>Manage your to-do list here..</h1>
+    <h1>To-Do List</h1>
 
-            <div class="container">
-                <form action="/add" method="post">
-                    <input type="text" name="task" placeholder="Enter your new task here.." required>
-                    <button type="submit">Add</button>
-                </form>
-                <ul>
+    <div class="container">
+        <form action="/add" method="post">
+            <input type="text" name="task" placeholder="Enter your new task here..." required>
+            <button type="submit" class="add">Add</button>
+        </form>
+        <ul>
             {% for task in tasks %}
             <li class="{{ 'completed' if task.completed }}">
-                <b>{{ task.name }} </b>
+                <b>{{ task.name }}</b>
                 <div>
                     <a href="/complete/{{ loop.index0 }}"><button class="complete">Complete</button></a>
                     <a href="/delete/{{ loop.index0 }}"><button class="delete">Delete</button></a>
                 </div>
             </li>
             {% endfor %}
-            </ul>
-            </div>
+        </ul>
+    </div>
 
     <script src="{{ url_for('static', filename='css/js/script.js') }}"></script>
-    
 </body>
 </html>

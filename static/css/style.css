@@ -7,11 +7,32 @@ body {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Dark Mode */
+/* Dark Mode - Improved Visibility */
 body.dark-mode {
-    background-color: #181818;
-    color: #e0e0e0;
+    background-color: #121212;
+    color: #f0f0f0;
 }
+
+/* Dark Mode Enhancements */
+body.dark-mode a {
+    color: #4dabf7;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+body.dark-mode li {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
 /* Toggle Button - Positioned at Top Right */
 #theme-toggle {
     position: absolute;
@@ -49,11 +70,11 @@ body.dark-mode {
 }
 
 .sun {
-    color: yellow;
+    color: #ffd700;
 }
 
 .moon {
-    color: white;
+    color: #b3b3b3;
 }
 
 /* Ball Inside the Toggle */
@@ -69,7 +90,7 @@ body.dark-mode {
 
 /* Dark Mode - Move Ball to the Right */
 body.dark-mode #theme-toggle {
-    background: #555;
+    background: #444;
 }
 
 body.dark-mode .toggle-ball {

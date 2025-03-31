@@ -98,7 +98,7 @@
             background-color: #222;
             color: #f0f0f0;
         }
-        li.completed {
+        b.completed {
             text-decoration: line-through;
             color: #777;
         }
@@ -131,7 +131,7 @@
             <li class="{{ 'completed' if task.completed }}">
                 <label>
                     <input type="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
-                    <b>{{ task.name }}</b>
+                    <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
                 </label>
                 <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task" 
                    style="color: red; font-size: 1.2em; font-weight: bold; text-decoration: none; display: inline-block; 

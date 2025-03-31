@@ -13,8 +13,9 @@ def home():
 @app.route("/add", methods=["POST"])
 def add_task():
     task_name = request.form.get("task")
+    timestamp = request.form.get("timestamp")  # Get timestamp from hidden input
     if task_name:
-        tasks.append({"name": task_name, "completed": False})
+        tasks.append({"name": task_name, "completed": False, "timestamp": timestamp})
     return redirect(url_for("home"))
 
 # Router to finished/completed task

@@ -80,14 +80,6 @@
             background: #28a745;
             color: white;
         }
-        .complete {
-            background: #007bff;
-            color: white;
-        }
-        .delete {
-            background: #dc3545;
-            color: white;
-        }
         ul {
             list-style-type: none;
             padding: 0;
@@ -141,7 +133,10 @@
                     <input type="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
                     <b>{{ task.name }}</b>
                 </label>
-                <a href="/delete/{{ loop.index0 }}"><button class="delete">Delete</button></a>
+                <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task" 
+                   style="color: red; font-size: 1.2em; font-weight: bold; text-decoration: none; display: inline-block; 
+                          padding: 2px 6px; border-radius: 4px; transition: 0.2s; background: rgba(255, 255, 255, 0.1);">
+                    ✖ </a>
             </li>
             {% endfor %}
         </ul>

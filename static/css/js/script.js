@@ -1,3 +1,4 @@
+// Dark theme toggle
 document.addEventListener("DOMContentLoaded", function () {
         // Show the page once JavaScript executes
         document.body.classList.add("loaded");
@@ -18,4 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("theme", "light");
             }
         });
+});
+
+// Timestamp creation
+document.getElementById("taskForm").addEventListener("submit", function () {
+    // Generate current timestamp
+    const timestamp = new Date().toLocaleString();
+    document.getElementById("timestamp").value = timestamp; // Assign timestamp before submitting form
 });

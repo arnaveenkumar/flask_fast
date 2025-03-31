@@ -137,11 +137,11 @@
         <ul>
             {% for task in tasks %}
             <li class="{{ 'completed' if task.completed }}">
-                <b>{{ task.name }}</b>
-                <div>
-                    <a href="/complete/{{ loop.index0 }}"><button class="complete">Complete</button></a>
-                    <a href="/delete/{{ loop.index0 }}"><button class="delete">Delete</button></a>
-                </div>
+                <label>
+                    <input type="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
+                    <b>{{ task.name }}</b>
+                </label>
+                <a href="/delete/{{ loop.index0 }}"><button class="delete">Delete</button></a>
             </li>
             {% endfor %}
         </ul>

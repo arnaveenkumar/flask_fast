@@ -1,6 +1,6 @@
 # Tickit
 
-I’m developing a to-do web app that allows users to manage tasks effortlessly. 
+A to-do web app that allows users to manage tasks effortlessly. 
 
 ## Features
 
@@ -23,9 +23,7 @@ I've started to develop this app as a side project. It is currently in active de
 - [Flask](https://flask.palletsprojects.com/en/stable/installation/)
 - [Node.js](https://nodejs.org/en/download)
 - [React](https://react.dev/learn/installation) (Soon..)
-- [Tailwind CSS](https://tailwindcss.com/docs/installation/using-vite) (Soon..)
   
-
 ## Contribute
 
 Feel free to contribute to this project and report any issues.

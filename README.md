@@ -21,17 +21,17 @@ An intuitive to-do web app designed to help users effortlessly manage tasks and 
 
 I'll be adding several features in the coming days.
 
-## Project Status
+## Project Status 🚧 
 
 I've started to develop this app as a side project. It is currently in active development.  
 
-## Requirements
+## Requirements 📌
 - [Python](https://www.python.org/downloads/)
 - [Flask](https://flask.palletsprojects.com/en/stable/installation/)
 - [Node.js](https://nodejs.org/en/download)
 - [React](https://react.dev/learn/installation) (Soon..)
   
-## Contribute
+## Contribute 🤝
 
 Feel free to contribute to this project and report any issues. Please check [contributory guidelines](https://github.com/arnaveenkumar/flask_fast/blob/main/CONTRIBUTING.md).
 

@@ -8,7 +8,7 @@ An intuitive to-do web app designed to help users effortlessly manage tasks and 
 * Dark mode toggle.
 * Timestamps for the created tasks.
 
-## Updates & Improvements
+## Updates & Improvements 🛠️ 
 
 * Enhanced dark theme for a better visual experience.
 * Simplified task creation: replaced the “Add” button with a sleek ‘+’ icon.

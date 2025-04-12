@@ -33,3 +33,8 @@
   - Respond to review comments and make required changes.
   - Push updates to the same branch if needed.
   - Wait for the me (maintainer) to merge your PR.
+
+## Finally...
+
+Your contribution made a real difference — this project wouldn’t exist without your dedication. Thank you!
+

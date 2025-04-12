@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-* Click "Fork" to create your own copy of the repository.
+* Click "Fork" to create your own copy of this repository.
 
 ## Local Setup
 
@@ -10,7 +10,7 @@
     - git clone https://github.com/your-username/project-name.git
     - cd project-name
 * Add the original repo as a remote: (Optional but recommended)
-    - git remote add upstream https://github.com/original-owner/project-name.git
+    - git remote add upstream https://github.com/arnaveenkumar/flask_fast.git
 
 ## Branching & Development
 

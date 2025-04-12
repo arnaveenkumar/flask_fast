@@ -33,6 +33,6 @@ I've started to develop this app as a side project. It is currently in active de
   
 ## Contribute
 
-Feel free to contribute to this project and report any issues. Please check [contributory guidelines] (https://github.com/arnaveenkumar/flask_fast/blob/main/CONTRIBUTING.md).
+Feel free to contribute to this project and report any issues. Please check [contributory guidelines](https://github.com/arnaveenkumar/flask_fast/blob/main/CONTRIBUTING.md).
 
 I'm also happy to receive feedback or feature requests.

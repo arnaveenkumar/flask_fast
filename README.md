@@ -1,17 +1,23 @@
 # TickIt 📝
 
-A to-do web app that allows users to manage tasks effortlessly. 
+An intuitive to-do web app designed to help users effortlessly manage tasks and stay organized with ease.
 
 ## Features 🚀
 
-* Improved dark theme.
-* Removed the "Add" button; tasks are now added by clicking the ‘+’ icon.
-* Removed the "Complete" button; tasks are now marked complete via a checkbox that applies a strikethrough.
-* Removed the "Delete" button; tasks are now deleted by clicking the ‘X’ icon next to each task.
-* Timestamps are added for the created tasks.
-* Upcoming features:
-     * Edit tasks.
-     * Embedding calender.
+* Add and Delete tasks.
+* Dark mode toggle.
+* Timestamps for the created tasks.
+
+## Updates & Improvements
+
+* Enhanced dark theme for a better visual experience.
+* Simplified task creation: replaced the “Add” button with a sleek ‘+’ icon.
+* Streamlined task completion: mark tasks as done with a checkbox (strikethrough applied).
+* Cleaner task removal: deleted the “Delete” button—just click the ‘X’ icon next to a task.
+* Added timestamps to track when each task was created.
+* Coming soon:
+     * Task editing functionality.
+     * Calendar embedding for better scheduling and planning.
 
 I'll be adding several features in the coming days.
 

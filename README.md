@@ -1,8 +1,8 @@
-# Tickit
+# TickIt 📝
 
 A to-do web app that allows users to manage tasks effortlessly. 
 
-## Features
+## Features 🚀
 
 * Improved dark theme.
 * Removed the "Add" button; tasks are now added by clicking the ‘+’ icon.

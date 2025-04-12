@@ -5,6 +5,7 @@ A to-do web app that allows users to manage tasks effortlessly.
 ## Features
 
 * Improved dark theme.
+* Removed the "Add" button; tasks are now added by clicking the ‘+’ icon.
 * Removed the "Complete" button; tasks are now marked complete via a checkbox that applies a strikethrough.
 * Removed the "Delete" button; tasks are now deleted by clicking the ‘X’ icon next to each task.
 * Timestamps are added for the created tasks.

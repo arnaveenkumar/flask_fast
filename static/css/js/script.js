@@ -20,10 +20,3 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 });
-
-// Timestamp creation
-document.getElementById("taskForm").addEventListener("submit", function () {
-    // Generate current timestamp
-    const timestamp = new Date().toLocaleString();
-    document.getElementById("timestamp").value = timestamp; // Assign timestamp before submitting form
-});

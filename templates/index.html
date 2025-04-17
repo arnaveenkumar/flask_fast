@@ -17,31 +17,40 @@
     <style>
         /* Prevent light theme flash */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            text-align: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.1s ease-in-out;
+        font-family:'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color); /* Use theme variable */
+        color: var(--text-primary);        /* Better text visibility */
+        text-align: center;
+
+        /* Smooth load animation */
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s;
         }
 
         body.loaded {
-            visibility: visible;
-            opacity: 1;
+        visibility: visible;
+        opacity: 1;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: var(--surface-color);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
         }
         body.dark-mode .container {
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        background-color: #1e1e1e; 
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); 
+        border: 1px solid #2a2a2a; 
+        border-radius: 16px;
+        padding: 30px;
+        transition: all 0.3s ease;
         }
         h1 {
             margin-bottom: 20px;
@@ -50,7 +59,13 @@
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
-            background: transparent;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05); /* translucent card */
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            flex-wrap: wrap;
+            transition: background-color 0.3s ease;
         }
         input[type="text"] {
             flex: 1;
@@ -61,7 +76,17 @@
             background-color: #fff;
             color: #222;
         }
+        .date{
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: transparent;
+        }
         body.dark-mode input[type="text"] {
+            background-color: transparent;
+            color: #f0f0f0;
+            border: 1px solid #555;
+        }
+         body.dark-mode input[type="date"] {
             background-color: transparent;
             color: #f0f0f0;
             border: 1px solid #555;

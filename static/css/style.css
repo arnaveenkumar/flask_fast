@@ -1,3 +1,4 @@
+
 :root {
     --bg-color: #f4f4f9;
     --text-primary: #111;
@@ -16,7 +17,12 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
-  }
+}
+
+body.loaded {
+    visibility: visible;
+    opacity: 1;
+}
 
 /* Dark Mode - Improved Visibility */
 
@@ -24,6 +30,7 @@ body.dark-mode {
     --bg-color: #121212;
     --text-primary: #e0e0e0;
 }
+
 /* Dark Mode Enhancements */
 body.dark-mode a {
     color: #62b6f0;
@@ -105,7 +112,7 @@ body.dark-mode input[type="date"] {
     font-size: 14px;
     position: relative;
     z-index: 1;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 .sun {
@@ -124,7 +131,7 @@ body.dark-mode input[type="date"] {
     height: 20px;
     background: white;
     border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Dark Mode - Move Ball to the Right */

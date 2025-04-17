@@ -4,18 +4,15 @@ An intuitive to-do web app designed to help users effortlessly manage tasks and 
 
 ## Features 🚀
 
-* Add and Delete tasks.
+* Add , Schedule and Delete tasks.
 * Dark mode toggle.
-* Timestamps for the created tasks.
 
 ## Updates & Improvements 🛠️ 
 
 * Enhanced dark theme for a better visual experience.
 * Cleaner task removal: deleted the “Delete” button—just click the trash icon next to a task.
-* Added timestamps to track when each task was created.
 * Coming soon:
      * Task editing functionality.
-     * Calendar embedding for better scheduling and planning.
 
 I'll be adding several features in the coming days.
 

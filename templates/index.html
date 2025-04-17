@@ -121,6 +121,12 @@
             right: 10px;
             cursor: pointer;
         }
+        .checkbox {
+            padding: 6px; /* Adds padding around the checkbox and label text */
+            display: inline-flex;
+            align-items: center;
+            margin-right: 6px;
+        }
     </style>
 </head>
 <body>
@@ -138,13 +144,13 @@
         <form action="/add" method="post">
             <input type="text" name="task" placeholder="Enter your new task here..." required>
             <input type="hidden" name="timestamp" id="timestamp">
-            <button type="submit" class="add">Add</button>
+            <button type="submit" class="add" title="Add Task">Add</button>
         </form>
         <ul>
             {% for task in tasks %}
             <li class="{{ 'completed' if task.completed }}">
                 <label>
-                    <input type="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
+                    <input type="checkbox" class="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
                     <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
                 </label>
                 <ul>

@@ -58,7 +58,14 @@ body.dark-mode li {
 
 /* Ensure form input text is visible in dark mode */
 body.dark-mode input[type="text"] {
-    background-color: #1f1f1f;
+    background-color: transparent;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 6px;
+    border-radius: 4px;
+}
+body.dark-mode input[type="date"] {
+    background-color: transparent;
     color: #f0f0f0;
     border: 1px solid #444;
     padding: 6px;

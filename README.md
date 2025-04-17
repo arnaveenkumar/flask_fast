@@ -13,7 +13,7 @@ An intuitive to-do web app designed to help users effortlessly manage tasks and 
 * Enhanced dark theme for a better visual experience.
 * Simplified task creation: replaced the “Add” button with a sleek ‘+’ icon.
 * Streamlined task completion: mark tasks as done with a checkbox (strikethrough applied).
-* Cleaner task removal: deleted the “Delete” button—just click the ‘X’ icon next to a task.
+* Cleaner task removal: deleted the “Delete” button—just click the trash icon next to a task.
 * Added timestamps to track when each task was created.
 * Coming soon:
      * Task editing functionality.

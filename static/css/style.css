@@ -1,18 +1,29 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-primary: #111;
+  }
+
 /* Default Light Mode */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
+    font-family:'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color); 
+    color: var(--text-primary);       
     text-align: center;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
+  
+    /* Smooth load animation */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  }
 
 /* Dark Mode - Improved Visibility */
-body.dark-mode {
-    background-color: #181818;
-    color: #e0e0e0;
-}
 
+body.dark-mode {
+    --bg-color: #121212;
+    --text-primary: #e0e0e0;
+}
 /* Dark Mode Enhancements */
 body.dark-mode a {
     color: #62b6f0;

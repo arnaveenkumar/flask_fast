@@ -143,7 +143,7 @@
     <div class="container">
         <form action="/add" method="post">
             <input type="text" name="task" placeholder="Enter your new task here..." required>
-            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="date" name="due_date" required>
             <button type="submit" class="add" title="Add Task">Add</button>
         </form>
         <ul>
@@ -154,7 +154,7 @@
                     <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
                 </label>
                 <ul>
-                    <li><strong>{{ task.task }}</strong> <br> <small>Created on: {{ task.timestamp }}</small></li> 
+                    <li><strong>{{ task.task }}</strong> <br> <small>Due on: {{ task.due_date }}</small></li> 
                 </ul>
                 <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task">
                 <button type="submit" class="trash-btn"><i class="fas fa-trash" style="color: white;"></i>

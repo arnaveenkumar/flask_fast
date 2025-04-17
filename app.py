@@ -10,17 +10,17 @@ def home():
     """Render the homepage with the current list of tasks."""
     return render_template("index.html", tasks=tasks)
 
-@app.route("/add", methods=["POST"])
+@app.route("/add", methods=["GET", "POST"])
 def add_task():
     """Add a new task to the list."""
     task_name = request.form.get("task")
-    timestamp = request.form.get("timestamp")  # Expected as hidden input
+    due_date = request.form.get('due_date')
 
     if task_name:
         tasks.append({
             "name": task_name,
+            'due_date': due_date,
             "completed": False,
-            "timestamp": timestamp
         })
 
     return redirect(url_for("home"))

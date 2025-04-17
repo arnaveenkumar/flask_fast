@@ -4,36 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TickIt</title>
-    <script>
-        (function() {
-            // Apply dark mode instantly before rendering
-            if (localStorage.getItem("theme") === "dark") {
-                document.documentElement.classList.add("dark-mode");
-            }
-        })();
-    </script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <style>
-        /* Prevent light theme flash */
-        body {
-        font-family:'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg-color); /* Use theme variable */
-        color: var(--text-primary);        /* Better text visibility */
-        text-align: center;
-
-        /* Smooth load animation */
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s;
-        }
-
-        body.loaded {
-        visibility: visible;
-        opacity: 1;
-        }
         .container {
         max-width: 600px;
         margin: 50px auto;
@@ -67,15 +41,16 @@
             flex-wrap: wrap;
             transition: background-color 0.3s ease;
         }
-        input[type="text"] {
+        input[type="text"]{
             flex: 1;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
-            background-color: #fff;
+            background-color: transparent;
             color: #222;
         }
+
         .date{
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -96,18 +71,7 @@
             background: #28a745;
             color: white;
         }
-        .trash-btn {
-            background-color: #e3342f;
-            color: white;
-            border: none;
-            padding: 11px 20px;
-            border-radius: 4px;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            transition: background 0.3s;
-            
-        }
+        
         ul {
             list-style-type: none;
             padding: 0;
@@ -116,14 +80,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            padding: 11px 20px;
             margin-bottom: 5px;
             background: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 4px;
+            position: relative;
         }
         body.dark-mode li {
-            background-color: #222;
+            background-color: #121212;
             color: #f0f0f0;
         }
         b.completed {
@@ -136,6 +101,18 @@
             right: 10px;
             cursor: pointer;
         }
+        .trash-btn {
+            background-color: #e3342f;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.3s;
+            
+        }
         .checkbox {
             padding: 6px; /* Adds padding around the checkbox and label text */
             display: inline-flex;
@@ -143,6 +120,7 @@
             margin-right: 6px;
         }
     </style>
+    
 </head>
 <body>
     <div id="theme-toggle">
@@ -152,24 +130,24 @@
             <span class="icon moon">🌙</span>
         </div>
     </div>
-
+  
     <h1>TickIt - Your all-in-one to-do app</h1>
 
     <div class="container">
-        <form action="/add" method="post">
+        <form id = "taskForm" action="/add" method="POST">
             <input type="text" name="task" placeholder="Enter your new task here..." required>
-            <input type="date" name="due_date" required>
+            <input type="date" class = "date" name="due_date" required>
             <button type="submit" class="add" title="Add Task">Add</button>
         </form>
         <ul>
             {% for task in tasks %}
-            <li class="{{ 'completed' if task.completed }}">
-                <label>
+            <li>
+                <label class="checkbox-wrapper">
                     <input type="checkbox" class="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
                     <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
                 </label>
                 <ul>
-                    <li><strong>{{ task.task }}</strong> <br> <small>Due on: {{ task.due_date }}</small></li> 
+                    <li><strong>{{ task.task }}</strong> <br> <small>Due on: {{ task.due_date }}</small></li>
                 </ul>
                 <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task">
                 <button type="submit" class="trash-btn"><i class="fas fa-trash" style="color: white;"></i>
@@ -179,7 +157,6 @@
             {% endfor %}
         </ul>
     </div>
-
     <script src="{{ url_for('static', filename='css/js/script.js') }}"></script>
 </body>
 </html>

@@ -81,6 +81,18 @@
             background: #28a745;
             color: white;
         }
+        .trash-btn {
+            background-color: #e3342f;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.3s;
+            
+        }
         ul {
             list-style-type: none;
             padding: 0;
@@ -138,10 +150,10 @@
                 <ul>
                     <li><strong>{{ task.task }}</strong> <br> <small>Created on: {{ task.timestamp }}</small></li> 
                 </ul>
-                <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task" 
-                   style="color: red; font-size: 1.2em; font-weight: bold; text-decoration: none; display: inline-block; 
-                          padding: 2px 6px; border-radius: 4px; transition: 0.2s; background: rgba(255, 255, 255, 0.1);">
-                    ✖ </a>
+                <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task">
+                <button type="submit" class="trash-btn"><i class="fas fa-trash" style="color: white;"></i>
+                </button>
+                </a>
             </li>
             {% endfor %}
         </ul>

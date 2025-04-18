@@ -20,3 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 });
+
+//Confirm before deleting a task
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this task?");
+}
+

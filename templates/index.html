@@ -6,26 +6,7 @@
     <title>TickIt</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
     <style>
-        .container {
-        max-width: 600px;
-        margin: 50px auto;
-        background-color: var(--surface-color);
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        }
-        body.dark-mode .container {
-        background-color: #1e1e1e; 
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); 
-        border: 1px solid #2a2a2a; 
-        border-radius: 16px;
-        padding: 30px;
-        transition: all 0.3s ease;
-        }
         h1 {
             margin-bottom: 20px;
         }
@@ -110,15 +91,21 @@
             font-size: 16px;
             display: inline-flex;
             align-items: center;
-            transition: background 0.3s;
-            
+            transition: background 0.3s;  
         }
         .checkbox {
-            padding: 6px; /* Adds padding around the checkbox and label text */
             display: inline-flex;
             align-items: center;
-            margin-right: 6px;
+            margin-right: 5px;
+            transform: scale(1.5);
         }
+        .due{
+            font-size: 12px;
+        }
+        .struck {
+        text-decoration: line-through;
+        color: gray;
+  }
     </style>
     
 </head>
@@ -135,24 +122,29 @@
 
     <div class="container">
         <form id = "taskForm" action="/add" method="POST">
-            <input type="text" name="task" placeholder="Enter your new task here..." required>
-            <input type="date" class = "date" name="due_date" required>
+            <input type="text" name="task" placeholder="Add your task here..." required>
+            <input type="date" class = "date" name="due_date">
             <button type="submit" class="add" title="Add Task">Add</button>
         </form>
         <ul>
             {% for task in tasks %}
             <li>
-                <label class="checkbox-wrapper">
                     <input type="checkbox" class="checkbox" onchange="window.location.href='/complete/{{ loop.index0 }}'" {{ 'checked' if task.completed }}>
-                    <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
-                </label>
-                <ul>
-                    <li><strong>{{ task.task }}</strong> <br> <small>Due on: {{ task.due_date }}</small></li>
-                </ul>
-                <a href="/delete/{{ loop.index0 }}" class="delete" title="Delete Task">
-                <button type="submit" class="trash-btn"><i class="fas fa-trash" style="color: white;"></i>
-                </button>
-                </a>
+                    <div>
+                        <b class="{{ 'completed' if task.completed else 'none'}}">{{ task.name }}</b>
+                            <strong>{{ task.task }}</strong><br>
+                            {% if task.due_date %}
+                            <span class="due">Due on: {{ task.due_date }}</span>
+                            {% endif %}
+                    </div>
+                
+                    <div>
+                        <a href="/delete/{{ loop.index0 }}" title="Delete Task" onclick="return confirmDelete()">
+                            <button type="submit" class="trash-btn">
+                            <i class="fas fa-trash" style="color: white;"></i>
+                            </button>
+                        </a>
+                    </div>
             </li>
             {% endfor %}
         </ul>

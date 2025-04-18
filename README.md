@@ -9,10 +9,12 @@ An intuitive to-do web app designed to help users effortlessly manage tasks and 
 
 ## Updates & Improvements 🛠️ 
 
-* Enhanced dark theme for a better visual experience.
+* Enhanced both light and dark theme for a better visual experience.
 * Cleaner task removal: deleted the “Delete” button—just click the trash icon next to a task.
+* Prevents accidental deletion - App confirms before deleting a task.
 * Coming soon:
      * Task editing functionality.
+     * Prioritize tasks with stars/pins.
 
 I'll be adding several features in the coming days.
 

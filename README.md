@@ -26,7 +26,6 @@ I've started to develop this app as a side project. It is currently in active de
 - [Python](https://www.python.org/downloads/)
 - [Flask](https://flask.palletsprojects.com/en/stable/installation/)
 - [Node.js](https://nodejs.org/en/download)
-- [React](https://react.dev/learn/installation) (Soon..)
   
 ## Contribute 🤝
 
